@@ -62,6 +62,12 @@ RESTful API providing:
 - artist
 - user reference
 
+## API Screenshots
+
+![Signup](./docs/signup-success.png)
+![Get Setlists](./docs/get-setlists.png)
+
+
 ### Setlist
 - name
 - venue
@@ -77,4 +83,7 @@ npm run dev
 
 ## Runs on:
 http://localhost:5001
+
+
+
 
