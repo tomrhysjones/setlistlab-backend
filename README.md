@@ -1,89 +1,149 @@
-# SetlistLab — Backend API
+# 🎸 SetlistLab Backend
 
-Backend API for **SetlistLab**, a MERN stack app for managing songs and performance setlists.
+The backend API for **SetlistLab**, a full-stack MERN application that helps musicians organise songs and build reusable live performance setlists.
 
-## 🚀 Overview
-RESTful API providing:
-- Authentication (JWT)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge)
+
+---
+
+## 🌐 Frontend Repository
+
+https://github.com/tomrhysjones/setlistlab-frontend
+
+---
+
+## 📖 Overview
+
+This repository contains the Express.js REST API that powers the SetlistLab frontend.
+
+It is responsible for:
+
+- User authentication
 - Song management
 - Setlist management
-- Song ↔ Setlist relationships
-- Protected routes
+- Database communication
+- REST API endpoints
+- Secure CRUD operations
 
-## 🧱 Tech Stack
+The backend communicates with a MongoDB database using Mongoose and provides data to the React frontend.
+
+---
+
+## ✨ Features
+
+- User authentication
+- RESTful API
+- CRUD operations
+- MongoDB integration
+- Mongoose models
+- Protected routes
+- Express middleware
+- JSON API responses
+
+---
+
+## 🛠 Tech Stack
+
 - Node.js
 - Express.js
 - MongoDB Atlas
-- Mongoose ODM
-- JWT Authentication
-- bcrypt password hashing
-- CORS
-- Morgan logging
-- dotenv
+- Mongoose
+- JavaScript
 
-## 🔐 Authentication
-- User signup
-- User login
-- JWT token issuance
-- Protected routes via middleware
+---
 
-## 📡 API Endpoints
+## 📁 Project Structure
 
-### Auth
-- POST /api/auth/signup
-- POST /api/auth/login
+```text
+controllers/
+middleware/
+models/
+routes/
+config/
+server.js
+package.json
+```
 
+---
 
-### Songs
+## 🗄 Database Models
 
-- POST /api/songs
-- GET /api/songs
-- DELETE /api/songs/:id
+The application stores data using MongoDB.
 
+Core models include:
 
-### Setlists
+- User
+- Song
+- Setlist
 
-- POST /api/setlists
-- GET /api/setlists
-- PUT /api/setlists/:id
-- DELETE /api/setlists/:id
-- PUT /api/setlists/:id/songs
-- PUT /api/setlists/:id/remove-song
+These models define the relationships between users, songs and reusable performance setlists.
 
+---
 
-## 🗄️ Database Models
+## 🚀 Installation
 
-### User
-- email
-- password (hashed)
+Clone the repository
 
-### Song
-- title
-- artist
-- user reference
+```bash
+git clone https://github.com/tomrhysjones/setlistlab-backend
+```
 
-## API Screenshots
+Install dependencies
 
-![Signup](./docs/signup-success.png)
-![Get Setlists](./docs/get-setlists.png)
-
-
-### Setlist
-- name
-- venue
-- gigDate
-- notes
-- songs (ObjectId refs)
-- user reference
-
-## 🧪 Development
 ```bash
 npm install
+```
+
+Run the server
+
+```bash
 npm run dev
+```
 
-## Runs on:
-http://localhost:5001
+---
 
+## 🔐 Environment Variables
 
+Create a `.env` file containing your environment variables.
+
+Example:
+
+```env
+MONGODB_URI=your_connection_string
+JWT_SECRET=your_secret_key
+PORT=3000
+```
+
+> Replace the values above with your own development credentials.
+
+---
+
+## 📈 Future Improvements
+
+- API documentation
+- Automated testing
+- Role-based authorisation
+- Request validation
+- Rate limiting
+- Logging
+- Docker support
+
+---
+
+## 👨‍💻 Author
+
+**Tom Rhys Jones**
+
+- GitHub: https://github.com/tomrhysjones
+- LinkedIn: https://www.linkedin.com/in/tom-rhys-jones-63b553209/
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 
