@@ -6,33 +6,25 @@ The backend API for **SetlistLab**, a full-stack MERN application that helps mus
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge)
+![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
-## 🌐 Frontend Repository
+# 🌐 Frontend Repository
 
 https://github.com/tomrhysjones/setlistlab-frontend
 
 ---
 
-## 📖 Overview
+# 📖 Overview
 
 This repository contains the Express.js REST API that powers the SetlistLab frontend.
 
-It is responsible for:
-
-- User authentication
-- Song management
-- Setlist management
-- Database communication
-- REST API endpoints
-- Secure CRUD operations
-
-The backend communicates with a MongoDB database using Mongoose and provides data to the React frontend.
+Built with Node.js, Express and MongoDB, it provides secure authentication and full CRUD functionality for managing users, songs and reusable performance setlists.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - User authentication
 - RESTful API
@@ -45,7 +37,7 @@ The backend communicates with a MongoDB database using Mongoose and provides dat
 
 ---
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 
 - Node.js
 - Express.js
@@ -55,21 +47,17 @@ The backend communicates with a MongoDB database using Mongoose and provides dat
 
 ---
 
-## 📁 Project Structure
+# 🔐 Authentication
 
-```text
-controllers/
-middleware/
-models/
-routes/
-config/
-server.js
-package.json
-```
+Users register and log in through dedicated authentication routes.
+
+Passwords are securely hashed using **bcrypt**, and protected API routes require a valid **JSON Web Token (JWT)**.
+
+Authenticated users can access and manage only their own songs and setlists.
 
 ---
 
-## 🗄 Database Models
+# 🗄 Database Models
 
 The application stores data using MongoDB.
 
@@ -83,21 +71,41 @@ These models define the relationships between users, songs and reusable performa
 
 ---
 
-## 🚀 Installation
+# 📁 Project Structure
 
-Clone the repository
-
-```bash
-git clone https://github.com/tomrhysjones/setlistlab-backend
+```text
+controllers/
+middleware/
+models/
+routes/
+config/
+server.js
+package.json
 ```
 
-Install dependencies
+---
+
+# 🚀 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/tomrhysjones/setlistlab-backend.git
+```
+
+Navigate into the project:
+
+```bash
+cd setlistlab-backend
+```
+
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-Run the server
+Start the development server:
 
 ```bash
 npm run dev
@@ -105,7 +113,7 @@ npm run dev
 
 ---
 
-## 🔐 Environment Variables
+# 🔐 Environment Variables
 
 Create a `.env` file containing your environment variables.
 
@@ -117,23 +125,23 @@ JWT_SECRET=your_secret_key
 PORT=3000
 ```
 
-> Replace the values above with your own development credentials.
+Replace the example values with your own development credentials.
 
 ---
 
-## 📈 Future Improvements
+# 📈 Future Improvements
 
 - API documentation
 - Automated testing
 - Role-based authorisation
 - Request validation
 - Rate limiting
-- Logging
+- Request logging
 - Docker support
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Tom Rhys Jones**
 
@@ -142,7 +150,7 @@ PORT=3000
 
 ---
 
-## 📄 License
+# 📄 License
 
 This project is licensed under the MIT License.
 
